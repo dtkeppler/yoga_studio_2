@@ -28,8 +28,8 @@
     <%= f.number_field :duration %>
   </div>
   <div class="field">
-    <%= f.label :instructor_id %><br>
-    <%= f.number_field :instructor_id %>
+    <%= f.label :instructor %><br>
+    <%= f.collection_select :instructor, Instructor.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
